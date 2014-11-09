@@ -1,0 +1,28 @@
+<?php // HTML self containers
+
+  echo <<<EOD
+<?xml version="1.0"?>
+...all sorts of XML goes here...
+Nothing will affect the output of this code until:
+EOD;
+?>
+
+EOD is just an example stop/start name.
+
+This works too:
+
+<?php // HTML safe containers
+
+  $myOutput = <<<MYHTMLSAFEOUTPUT
+<?xml version="1.0"?>
+<html>
+  <title>PHP Example</title>
+  <body>
+    <p>...all sorts goes here...</p>
+  </body>
+</html>
+MYHTMLSAFEOUTPUT;
+
+echo $myOutput;
+
+?>
